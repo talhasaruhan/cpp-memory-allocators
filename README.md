@@ -18,9 +18,9 @@ Multiple custom allocators written in C++ for my renderer, it's still incomplete
 * A basic benchmarking tool that measures the performance of allocation and free operations. Currently it accepts a union of these flags:
   + ALLOC_RAND, ALLOC_SEQ, FREE_LIFO, FREE_FIFO, FREE_RAND
 * Can initialize with **STATIC**, **STATIC_PREALLOC**, **VMDYNAMIC** modes.
-  + STATIC: Let the allocator commit a static pool memory.  
-  + STATIC_PREALLLOC: Allow a preallocated block to be managed by the allocator.  
-  + VMDYNAMIC: Use Win32 API to allocate a huge contiguous memory block, which then can be committed as needed.
+  + **STATIC**: Let the allocator commit a static pool memory.  
+  + **STATIC_PREALLLOC**: Allow a preallocated block to be managed by the allocator.  
+  + **VMDYNAMIC**: Use Win32 API to allocate a huge contiguous memory block, which then can be committed as needed.
 * Try to give the user freedom to choose between first/best fit scenerios whenever possible.
 * Tries to minimize 
 
