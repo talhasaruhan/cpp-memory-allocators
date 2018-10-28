@@ -14,15 +14,13 @@ Multiple custom allocators written in C++ for my renderer, it's still incomplete
 * **Red Black Tree Allocator, O(log(N)), O(log(N))**
   + An allocator that constructs an Red Black Tree out of the unused blocks in the memory arena. 
 
-## Some remarks:
+## Some remarks and features:
 * A basic benchmarking tool that measures the performance of allocation and free operations. Currently it accepts a union of these flags:
   + ALLOC_RAND, ALLOC_SEQ, FREE_LIFO, FREE_FIFO, FREE_RAND
-* Can initialize with **STATIC**, **STATIC_PREALLOC**, **VMDYNAMIC** modes.
+* Can initialize allocators with **STATIC**, **STATIC_PREALLOC**, **VMDYNAMIC** modes. Currently only Sequential Lists accepts these arguments, but it's straightforward to replicate the idea for others as it's independent of the implementation details.
   + **STATIC**: Let the allocator commit a static pool memory.  
   + **STATIC_PREALLLOC**: Allow a preallocated block to be managed by the allocator.  
   + **VMDYNAMIC**: Use Win32 API to allocate a huge contiguous virtual memory block (most advantageous in 64-bit systems), which then can be committed as needed.
-* Try to give the user freedom to choose between first/best fit scenerios whenever possible.
-* Tries to minimize 
 
 ## What I intent to work on next:
 * Have a proper benchmarking tool that allocates & frees in a randomly fashion rather than having a long alloc or free strike one after other.
