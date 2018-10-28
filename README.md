@@ -28,6 +28,9 @@ Multiple custom allocators written in C++ for my renderer, it's still incomplete
 * Implement a segregated lists algorithm.
 * Homogenize the API across different allocators (template arguments etc.).
 
+## How to run?
+* If you have a basic Win32 VS set-up, set the language standard to **C++ 17**, for contexprs, and you should be ready to go. If you face any problems feel free to drop an issue.
+
 ## Exposed API for the base class:
 ```
 class Allocator {
